@@ -28,9 +28,9 @@ in {
 
       ensureUsers = mkOption {
         default = {};
-        description = lib.mdDoc ''
-          List of user accounts which get automatically created if they don't
-          exist yet. This option does not delete accounts which are not listed
+        description = ''
+          List of user accounts that get automatically created if they don't
+          exist yet. This option does not delete accounts that are not listed
           anymore.
         '';
         example = {
@@ -49,7 +49,7 @@ in {
               type = types.path;
               example = "/path/to/file";
               default = null;
-              description = lib.mdDoc ''
+              description = ''
                 Specifies the path to a file containing the
                 clear text password for the user.
               '';
@@ -77,8 +77,8 @@ in {
         default = "";
         type = types.lines;
         example = "nextcloud-occ app:enable cleanup";
-        description = lib.mdDoc ''
-          Extra OCC commands which get executed after setup.
+        description = ''
+          Extra OCC commands that get executed after setup.
         '';
       };
     };
